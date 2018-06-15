@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "iosfwd": "cpp",
-        "limits": "cpp"
+        "limits": "cpp",
+        "initializer_list": "cpp"
     },
     "liveServer.settings.multiRootWorkspaceName": "sandpile"
 }
