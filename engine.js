@@ -55,6 +55,8 @@ function topple() {
 }
 
 function render() {
+
+    //valor total dividido pelo tamanho do canvas * 4
     for (let x = 0; x < width; x++) {
         for (let y = 0; y < height; y++) {
             let num = sandpiles[x][y];
