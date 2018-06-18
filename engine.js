@@ -2,6 +2,7 @@
 const canvas = document.getElementById('sandpiles');
 const ctx = canvas.getContext('2d');
 
+ctx.scale(20, 20);
 let width = canvas.width;
 let height = canvas.height;
 
@@ -58,9 +59,9 @@ function render() {
         for (let y = 0; y < height; y++) {
             let num = sandpiles[x][y];
             if (num == 0) {
-                imageData.data[x + y * width] = 122;
-                imageData.data[x + y * width + 1] = 0;
-                imageData.data[x + y * width + 2] = 229;
+                imageData.data[x + y * width] = 122;     //r
+                imageData.data[x + y * width + 1] = 0;   //g
+                imageData.data[x + y * width + 2] = 229; //b
             } else if (num == 1) {
                 imageData.data[x + y * width] = 255;
                 imageData.data[x + y * width + 1] = 0;
@@ -83,10 +84,9 @@ function draw() {
     render();
     for (let index = 0; index < 100; index++) {
         topple();
+        ctx.putImageData(imageData, 0, 0);
     }
-    ctx.putImageData(imageData, 0, 0);
 }
 
-console.log(data.length);
 setup();
 draw();
