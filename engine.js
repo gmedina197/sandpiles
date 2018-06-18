@@ -90,7 +90,3 @@ function draw() {
 console.log(data.length);
 setup();
 draw();
-/* for (let index = 0; index < 100000000; index++) {
-    setTimeout(draw, 1000);
-    i++;
-} */
